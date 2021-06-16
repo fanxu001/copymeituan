@@ -1,0 +1,48 @@
+/* pages/s-msgDialog/s-msgDialog.wxss */
+.head-box .van-nav-bar{
+  background-color: #FDCF66 !important;
+  color: #ffffff !important;
+}
+.head-box .van-icon ,.head-box .van-nav-bar__title{
+  color: #ffffff !important;
+font-size: 20px;
+letter-spacing: 2px;
+}
+.dialog-out-box{
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.dialog-one{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.dialog-pic{
+  border-radius: 100%;
+  width: 40px;
+height: 40px;
+background: #d0cccc;
+}
+.dialog-detail{
+  width: 230px;
+background: #f3f3f3;
+border-radius: 10px;
+padding: 16px 20px;
+font-size: 12px;
+font-weight: bold;
+text-align: justify;
+color: #928f8f;
+}
+.bottom-box{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+background: #FDCF66;
+padding: 12px;
+}
+.input-box{
+  width: 326px;
+background: #ffffff;
+margin: 0 auto;
+}

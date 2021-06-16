@@ -1,0 +1,68 @@
+<view>
+  <view class="head-box">
+    <!-- bar -->
+    <bar active="{{3}}" isTabbar ="{{true}}"></bar>
+    <!-- tab -->
+    <van-tabs swipeable animated color="#FDCF66" active="{{ current }}" bind:change="onChange">
+      <van-tab title="全部">
+      </van-tab>
+      <van-tab title="客户"></van-tab>
+      <van-tab title="骑手"></van-tab>
+    </van-tabs>
+    <van-cell-group>
+      <van-cell title="{{title}}">
+        <van-switch 
+        size="25px"
+        slot="right-icon" 
+        inactive-color="#ffffff"
+        active-color="#FDCF66"
+        checked="{{ checked }}" 
+        bind:change="onSwitch" />
+      </van-cell>
+    </van-cell-group>
+  </view>
+
+  <!-- 内容盒子 -->
+  <view class="msg-box">
+    <view class="msg-inner-box">
+      <view class="msg-border" bindtap="goMsg">
+        <view class="msg-title">
+        <view class="msg-name">Tom</view>
+        <view class="msg-time">23:59</view>
+      </view>
+      <view class="msg-title">
+        <view class="msg-content">
+          If we can only encounter each 
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam doloribus et dolores veniam accusantium dolorum architecto, ullam est, recusandae adipisci ducimus eligendi temporibus suscipit nobis quo tempora. Nobis, neque harum?
+          other ...
+        </view>
+        <view class="msg-tag">
+            <view class="msg-tag-count">
+              1
+            </view>
+
+        </view>
+      </view>
+      </view>
+      <view class="msg-border">
+        <view class="msg-title">
+        <view class="msg-name">Tom</view>
+        <view class="msg-time">23:59</view>
+      </view>
+      <view class="msg-title">
+        <view class="msg-content">
+          If we can only encounter each 
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam doloribus et dolores veniam accusantium dolorum architecto, ullam est, recusandae adipisci ducimus eligendi temporibus suscipit nobis quo tempora. Nobis, neque harum?
+          other ...
+        </view>
+        <view class="msg-tag">
+            <view class="msg-tag-count">
+              1
+            </view>
+        </view>
+      </view>
+      </view>
+      
+    </view>
+  </view>
+</view>

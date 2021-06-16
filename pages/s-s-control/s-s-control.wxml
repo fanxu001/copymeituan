@@ -1,0 +1,65 @@
+<view>
+  <view class="active-box">
+    <block wx:for="{{active_list}}"
+    wx:key="index"
+    >
+  
+    <view class="active-one">
+      <view class="active-pic">
+        <image class="active-pic-one" src="{{item.pic}}"></image>
+      </view>
+      <view class="active-info">满{{item.info1}}减{{item.info2}}</view>
+    </view>
+  </block>
+   
+  </view>
+  <!-- 添加店铺按钮 -->
+<view class="add">
+  <view class="add-pic" bind:tap="showAdd">
+    <image  class="pic" src="../../static/imgs/plus.png"></image>
+  </view>
+</view>
+
+<!-- 展示添加的弹出框 -->
+<view class="show-add">
+  <van-dialog
+  use-slot
+  title="标题"
+  show="{{ show }}"
+  show-cancel-button
+  bind:close="onClose"
+  closeOnClickOverlay
+  confirm-button-color="#ffc66e"
+  bind:confirm="addActive"
+>
+<view class="title-box">
+  <view class="add-title">
+    满
+  <van-field
+  class="add-input" 
+    value="{{ on_money }}"
+    border="{{ false }}"
+    bind:change="getInput_1"
+    maxlength="{{3}}"
+    type="number"
+    focus="{{true}}"
+    center
+  />
+  </view>
+  <view class="add-title">
+    减
+    <van-field
+  class="add-input" 
+    value="{{ cut_money}}"
+    border="{{ false }}"
+    bind:change="getInput_2"
+    maxlength="{{3}}"
+    type="number"
+    center
+  />
+  </view>
+</view>
+  
+</van-dialog>
+</view>
+</view>

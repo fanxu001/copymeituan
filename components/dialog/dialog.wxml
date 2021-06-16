@@ -1,0 +1,10 @@
+<van-dialog  show="{{show}}"
+show-cancel-button
+bind:close="onClose"
+confirm-button-color="#FDCF66"
+close-on-click-overlay
+title="{{title}}"
+use-slot
+>
+  <slot></slot>
+  </van-dialog>

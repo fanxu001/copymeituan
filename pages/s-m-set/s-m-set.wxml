@@ -1,0 +1,40 @@
+<view>
+<!--  bar-->
+<bar active="{{2}}"></bar>
+<!-- 填入信息表单 -->
+<view class="input-box">
+  <van-cell-group>
+    <block wx:for="{{input_list}}" wx:key="index" wx:for-item="item">
+      <van-field
+  label="{{item.label}}"
+    value="{{ item.value }}"
+    clearable
+  >
+    
+      </van-field>
+    </block>
+
+</van-cell-group>
+<view class="upload-img">
+  <view class="van-field__label">
+      店铺图片
+  </view>
+  <view class="upload-location">
+    <van-uploader file-list="{{ fileList }}" 
+        max-count="1"
+        bind:after-read="afterRead"
+        bind:delete ="deleteImg"
+        >
+        <van-button
+        size="normal"
+        icon="photo" type="primary" 
+        color="#FDCF66"
+        >上传图片</van-button>
+        </van-uploader>
+  </view>
+  
+</view>
+       
+
+</view>
+</view>

@@ -1,0 +1,36 @@
+<view class="dialog-box">
+  <view class="dialog-info-box">
+    <block wx:for="{{page_lists}}"
+    wx:for-index="index"
+    wx:for-item="item" wx:key="index">
+      <view class="dialog-info-list">
+        <view class="info-item">
+          {{item.info1}}
+        </view>
+        <view class="info-item">
+          <van-field wx:if="{{!item.isUpload}}" value="{{ value }}" placeholder="请输入用户名" border="{{ false }}"
+            clearable />
+          <block wx:if="{{item.isUpload}}">
+            <van-uploader file-list="{{ fileLists[index-4] }}" 
+            name="{{index-4}}" 
+            deletable="{{true}}" show-upload 
+            preview-image
+            bind:delete="deleteImg"
+          bind:after-read="addImg" max-count="1">
+              <view class="upload-box">
+                <image class="upload-pic" src="../../static/imgs/shangchuan.png"></image>
+              </view>
+            </van-uploader>
+          </block>
+        </view>
+      </view>
+    </block>
+    <!-- 最后按钮 -->
+    <view class="go-btn" bindtap="goSubmit">
+      提交
+      <image class="go-icon" src="../../static/imgs/left.png"></image>
+    </view>
+  </view>
+  <!-- 是否提交成功 -->
+  <van-notify id="van-notify" />
+</view>

@@ -1,0 +1,210 @@
+.slider-box{
+  width: 82px;
+height: 507px;
+background: #f8f6f6;
+border-radius: 11px;
+position: fixed;
+left: 0;
+}
+.van-sidebar-item--selected{
+  border-color:#FDCF66 !important;
+}
+.goods-box{
+  padding: 10px 7px;
+  padding-left: 90px;
+}
+.goods-list{
+  padding: 10px 7px;
+  width: 263px;
+height: 108px;
+border: 1px solid #ebe6e6;
+border-radius: 11px;
+margin-bottom: 15px;
+}
+.goos-list-box{
+  display: flex;
+}
+.goods-pic{
+  width: 90px;
+height: 62px;
+background: #ebe6e6;
+border-radius: 10px;
+flex-shrink: 0;
+}
+.content-box{
+  padding: 0 15px;
+}
+.content-one{
+font-size: 12px;
+font-weight: bold;
+text-align: left;
+color: #585858;
+letter-spacing: 1px;
+margin-bottom: 11px;
+
+}
+.content-two{
+font-size: 9px;
+font-weight: bold;
+text-align: left;
+color: #585858;
+letter-spacing: 1px;
+}
+.content-three{
+font-size: 12px;
+font-weight: bold;
+text-align: left;
+color: #f14242;
+letter-spacing: 1px;
+}
+.btn-box{
+  display: flex;
+}
+.btn{
+  flex: 1;
+}
+.van-button{
+border-radius: 7px !important;
+margin: 0 10px;
+font-size: 12px;
+font-weight: bold;
+text-align: left;
+color: #585858;
+letter-spacing: 1px;
+
+}
+.btn1 .van-button{
+  width: 81px;
+height: 23px;
+opacity: 1;
+border: 1px solid #ebe6e6;
+border-radius: 7px;
+}
+.btn2 .van-button{
+  width: 66px;
+height: 23px;
+opacity: 1;
+border: 1px solid #ebe6e6;
+border-radius: 7px;
+}
+.add-box{
+  padding: 21px;
+}
+.add-one{
+  display: flex;
+  margin-bottom: 18px;
+font-size: 12px;
+font-weight: 400;
+text-align: left;
+color: #605a5a;
+letter-spacing: 1px;
+align-items: center;
+justify-content: center;
+}
+.upload-location{
+font-size: 14px;
+font-weight: 400;
+text-align: left;
+color: #605a5a;
+letter-spacing: 1px;
+padding: 15px;
+}
+.upload-box{
+  width: 200px;
+height: 85px;
+background: #f7ce6f;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 20px 50px;
+}
+.upload-pic{
+width: 60px;
+height: 40px;
+
+}
+.info-item .van-uploader__preview-image{
+  width: 200px !important;
+  height: 85px;
+border-radius: 10px;
+
+}
+.info-item .van-uploader__preview{
+  margin: 0;
+}
+.ad{
+  width: 100%;
+  height: 300px;
+}
+.add{
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 40rpx 0;
+}
+.add-pic{
+  width: 52px;
+  height: 52px;
+  background-color: #FDCF66;
+  margin: 0 auto;
+  border-radius: 100%;
+  text-align: center;
+}
+.pic{
+ display: inline-block;
+  width: 50%;
+  height: 50%;
+  transform: translateY(50%);
+}
+.active-box{
+  padding: 30px 3px;
+}
+.active-one{
+    padding: 8px 2px;
+height: 20px;
+font-size: 12px;
+font-weight: bold;
+text-align: left;
+color: #ffc66e;
+border: 1px solid #ffc66e;
+display: flex;
+border-radius: 15px;
+float: left;
+margin: 9px;
+}
+.active-pic-one{
+  vertical-align: middle;
+  width: 18px;
+height: 18px;
+border-radius: 100%;
+border: 1px solid #ffc66e;
+margin:0 4px;
+}
+.add{
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  margin: 40rpx 0;
+}
+
+.title-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-title{
+  width: 145px;
+height: 45px;
+background: #ffffff;
+border: 1px solid #f6c65d;
+border-radius: 4px;
+font-size: 20px;
+font-weight: bold;
+text-align: left;
+color: #000000;
+letter-spacing: 2px;
+display: flex;
+margin: 30px 8px;
+}

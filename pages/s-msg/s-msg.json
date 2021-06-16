@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "bar":"../../components/bar/bar"
+  },
+  "backgroundTextStyle":"light",
+  "navigationBarBackgroundColor": "#FDCF66",
+  "navigationBarTitleText": ""
+}

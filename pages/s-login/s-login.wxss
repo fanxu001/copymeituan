@@ -1,0 +1,6 @@
+.bg-color{
+  background-color: #FFC914;
+}
+.input-item:last-child{
+  margin-bottom: 50rpx !important;
+}

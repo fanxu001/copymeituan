@@ -1,0 +1,4 @@
+/* pages/s-register/s-register.wxss */
+.bg-color{
+  background-color: #FFC914;
+}

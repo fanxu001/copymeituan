@@ -1,0 +1,221 @@
+<view >
+  <!-- 导航 -->
+  <bar isTabbar="{{false}}"></bar>
+  <!-- 底部导航 -->
+  <van-tabbar active="{{ active }}" bind:change="onChange" active-color="#FDCF66" inactive-color="#959393" fixed>
+    <van-tabbar-item icon="apps-o"
+    bindtap="showGood"
+    >管理分类</van-tabbar-item>
+    <van-tabbar-item icon="cart-o" bindtap="showAdd">新建商品</van-tabbar-item>
+  </van-tabbar>
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange"
+      bind:search="onSearch">
+      <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+  </view>
+  <!-- 侧边导航栏 -->
+  <view class="slider-box" >
+    <van-sidebar active-key="{{ activeKey }}"    custom-class="background:pink;font-size:20px">
+      <scroll-view 
+      
+      scroll-y="true">
+
+        <block wx:for="{{active_list}}" wx:key="index">
+        <van-sidebar-item title="{{item.info1}}" />
+      </block>
+      </scroll-view>
+    </van-sidebar>
+  </view>
+
+  <!-- 商品管理 -->
+  <view class="goods-box">
+    <view class="goods-list">
+      <view class="goos-list-box">
+        <view class="goods-pic-box">
+          <image class="goods-pic" src="../../static/imgs/logo.png"></image>
+        </view>
+        <view class="content-box">
+          <view class="content-list">
+            <view class="content-one">暖暖星球杯</view>
+            <view class="content-one content-two">
+              库存 999 库存 999
+            </view>
+            <view class="content-one content-three">
+              ￥15
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn-box">
+        <view class="btn btn1" bindtap="showChange">
+          <van-button plain size="mini" round color="#FDCF66">价格/库存</van-button>
+        </view>
+        <view class="btn btn2" bindtap="showDelete">
+          <van-button plain size="mini" round color="#FDCF66">下架</van-button>
+        </view>
+        <view class="btn btn2" bindtap="showEditor">
+          <van-button plain size="mini" round color="#FDCF66">编辑</van-button>
+        </view>
+      </view>
+    </view>
+    <view class="goods-list">
+      <view class="goos-list-box">
+        <view class="goods-pic-box">
+          <image class="goods-pic" src="../../static/imgs/logo.png"></image>
+        </view>
+        <view class="content-box">
+          <view class="content-list">
+            <view class="content-one">暖暖星球杯</view>
+            <view class="content-one content-two">
+              库存 999 库存 999
+            </view>
+            <view class="content-one content-three">
+              ￥15
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn-box">
+        <view class="btn btn1" bindtap="showChange">
+          <van-button plain size="mini" round color="#FDCF66">价格/库存</van-button>
+        </view>
+        <view class="btn btn2" bindtap="showDelete">
+          <van-button plain size="mini" round color="#FDCF66">下架</van-button>
+        </view>
+        <view class="btn btn2" bindtap="showEditor">
+          <van-button plain size="mini" round color="#FDCF66">编辑</van-button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 新建商品 新增弹出框 -->
+  <view class="add-good">
+    <dialog show="{{isShowAdd}}" title="添加商品">
+      <view class="add-box">
+        <view class="add-one">
+          <view class="add-name">
+            商品名称：
+          </view>
+          <view class="add-input">
+            <van-field value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" bind:change="onChange" />
+          </view>
+        </view>
+        <view class="add-one">
+          <view class="add-name">
+            商品名称：
+          </view>
+          <view class="add-input">
+            <van-field value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" bind:change="onChange" />
+          </view>
+        </view>
+        <view class="add-one">
+          <view class="add-name">
+            商品名称：
+          </view>
+          <view class="add-input">
+            <van-field value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" bind:change="onChange" />
+          </view>
+        </view>
+        <view class="add-one">
+          <view class="add-name">
+            商品名称：
+          </view>
+          <view class="add-input">
+            <van-field value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" bind:change="onChange" />
+          </view>
+        </view>
+      </view>
+    </dialog>
+  </view>
+
+  <!-- 商品改变 -->
+  <view class="change">
+    <dialog show="{{isShowChange}}" title="价格/库存">
+      <form>
+        <van-cell-group>
+          <van-field label="价格" model:value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" name="price" />
+          <van-field label="库存" model:value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" name="count" />
+        </van-cell-group>
+      </form>
+    </dialog>
+  </view>
+  <!-- 商品下架 -->
+  <view class="delete">
+    <dialog show="{{isShowDelete}}" title="是否下架？"></dialog>
+  </view>
+  <!-- 商品编辑 -->
+  <view class="editor">
+    <dialog show="{{isShowEditor}}" title="编辑">
+      <form action="">
+        <van-cell-group>
+          <van-field label="价格" model:value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" name="price" />
+          <view class="upload-location">
+            <view>
+              商品图片：
+            </view>
+            <van-uploader file-list="{{ fileList }}" name="{{index-4}}" deletable="{{true}}" show-upload preview-image
+              bind:delete="deleteImg" bind:after-read="addImg" max-count="1">
+              <view class="upload-box">
+                <image class="upload-pic" src="../../static/imgs/shangchuan.png"></image>
+              </view>
+            </van-uploader>
+          </view>
+        </van-cell-group>
+      </form>
+    </dialog>
+  </view>
+
+  <!-- 管理分类弹框 -->
+  <dialog show="{{isShowGoods}}" title="管理分类"
+  >
+<view class="ad">
+  <view class="active-box">
+    <block wx:for="{{active_list}}"
+    wx:key="index"
+    >
+    <view class="active-one">
+      <view class="active-info">{{item.info1}}</view>
+    </view>
+  </block>
+   <!-- 添加店铺按钮 -->
+<view class="add">
+  <view class="add-pic" bind:tap="showAddGood">
+    <image  class="pic" src="../../static/imgs/plus.png"></image>
+  </view>
+</view>
+  </view>
+</view>
+</dialog>
+
+<!-- 展示添加的弹出框 -->
+<view class="show-add">
+  <van-dialog
+  use-slot
+  title="标题"
+  show="{{ isAddGood }}"
+  show-cancel-button
+  bind:close="onClose"
+  closeOnClickOverlay
+  confirm-button-color="#ffc66e"
+  bind:confirm="addActive"
+>
+<view class="title-box">
+  <view class="add-title">
+  <van-field
+  class="add-input" 
+    value="{{ on_money }}"
+    border="{{ false }}"
+    bind:change="getInput_1"
+    type="number"
+    focus="{{true}}"
+    center
+  />
+  </view>
+</view>
+  
+</van-dialog>
+</view>
+</view>

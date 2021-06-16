@@ -1,0 +1,114 @@
+<view>
+  <!-- 标题 部分 -->
+  <view class="half-bg">
+    <view class="half-bg-inner">
+      <view class="title">申请记录</view>
+      <view class="title">新建 ></view>
+    </view>
+  </view>
+ <!-- 选择器位置 -->
+ <view wx:if="{{isShowPicker}}" class="picker-style">
+          <van-picker 
+          show-toolbar
+          title="请选择"
+          columns="{{ options }}" bind:change="onChange"
+          bind:confirm="onConfirm"
+          bind:cancel="onCancel"
+           />
+        </view>
+  <!-- 记录列表部分 -->
+  <view class="records-box">
+    
+    <view class="records-inner-box">
+      <view class="records-select">
+        <view class="show-picker" bindtap="showPicker">
+          {{options_text}} 
+          <image src="../../static/imgs/select.png" class="select-pic" > </image>
+        </view> 
+       
+       
+    </view>
+    <view class="records-list" bind:tap="showBus">
+      <view class="list-left">
+        <image src="../../static/imgs/logo.png"  class="list-img" lazy-load ></image>
+      </view>
+      <view class="list-right">
+        <view class="list-info">
+          <view class="info-one">
+            <view class="info-one-item">
+              店名:{{}}
+            </view>
+            <view class="info-one-item">
+              经营品类:{{}}
+            </view>
+          </view>
+          <view class="info-one">
+            <view class="info-one-item">
+              店名:{{}}
+            </view>
+            <view class="info-one-item">
+              经营品类:{{}}
+            </view>
+          </view>
+        
+        
+        </view>
+        <view class="list-status">
+          <van-tag type="danger" size="large" round>标签</van-tag>
+        </view>
+      </view>
+    </view>
+    <view class="records-list" bindtap="showBus">
+      <view class="list-left">
+        <image src="../../static/imgs/logo.png"  class="list-img" lazy-load ></image>
+      </view>
+      <view class="list-right">
+        <view class="list-info">
+          <view class="info-one">
+            <view class="info-one-item">
+              店名:{{}}
+            </view>
+            <view class="info-one-item">
+              经营品类:{{}}
+            </view>
+          </view>
+          <view class="info-one">
+            <view class="info-one-item">
+              店名:{{}}
+            </view>
+            <view class="info-one-item">
+              经营品类:{{}}
+            </view>
+          </view>
+        
+        
+        </view>
+        <view class="list-status">
+          <van-tag type="danger" size="large" round>标签</van-tag>
+        </view>
+      </view>
+    </view>
+
+<!-- 添加店铺按钮 -->
+<view class="add">
+  <view class="add-pic" bind:tap="showAdd">
+    <image  class="pic" src="../../static/imgs/plus.png"></image>
+  </view>
+</view>
+    </view>
+    
+ 
+
+
+  </view>
+   <!-- 弹出店家详情 -->
+   <block
+    wx:if="{{isShowPop}}"
+    >
+    <recordPop></recordPop>
+  </block>
+  <!-- 弹出添加商品的 -->
+  <view wx:if="{{isShowAdd}}">
+    <recordAdd></recordAdd>
+  </view>
+</view>

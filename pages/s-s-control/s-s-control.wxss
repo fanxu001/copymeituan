@@ -1,0 +1,68 @@
+/* pages/s-s-control/s-s-control.wxss */
+.active-box{
+  padding: 30px 3px;
+}
+.active-one{
+    padding: 8px 2px;
+height: 20px;
+font-size: 12px;
+font-weight: bold;
+text-align: left;
+color: #ffc66e;
+border: 1px solid #ffc66e;
+display: flex;
+border-radius: 15px;
+float: left;
+margin: 9px;
+}
+.active-pic-one{
+  vertical-align: middle;
+  width: 18px;
+height: 18px;
+border-radius: 100%;
+border: 1px solid #ffc66e;
+margin:0 4px;
+}
+.add{
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 40rpx 0;
+}
+.add-pic{
+  width: 52px;
+  height: 52px;
+  background-color: #FDCF66;
+  margin: 0 auto;
+  border-radius: 100%;
+  text-align: center;
+}
+.pic{
+ display: inline-block;
+  width: 50%;
+  height: 50%;
+  transform: translateY(50%);
+}
+.title-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-title{
+font-size: 20px;
+font-weight: bold;
+text-align: left;
+color: #000000;
+letter-spacing: 2px;
+display: flex;
+margin: 30px 8px;
+}
+.add-input .van-cell{
+  padding: 0 !important;
+  width: 34px !important;
+height: 21px !important;
+border: 1px solid #000000;
+margin:  3px;
+
+}

@@ -1,0 +1,66 @@
+<view>
+
+  <!-- navbar -->
+  <view class="head-box"> 
+    <van-nav-bar  
+    title="标题" bind:click-right="onClickRight">
+      <van-icon name="phone-o" slot="right" />
+    </van-nav-bar>
+  </view>
+
+  <view class="dialog-out-box">
+    <view class="dialog-inner-box">
+      <view class="dialog-one">
+        <image class="dialog-pic" src="../../static/imgs/logo.png"></image>
+        <view class="dialog-detail">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero explicabo, molestiae quas, ut dignissimos porro earum dolores nesciunt impedit deserunt corporis eum? Dolores, voluptates at incidunt repudiandae voluptatibus nostrum rerum!
+        </view>
+      </view>
+      <view class="dialog-one">
+       
+        <view class="dialog-detail">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero explicabo, molestiae quas, ut dignissimos porro earum dolores nesciunt impedit deserunt corporis eum? Dolores, voluptates at incidunt repudiandae voluptatibus nostrum rerum!
+        </view>
+        <image class="dialog-pic" src="../../static/imgs/logo.png"></image>
+      </view>
+      <view class="dialog-one">
+        <image class="dialog-pic" src="../../static/imgs/logo.png"></image>
+        <view class="dialog-detail">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero explicabo, molestiae quas, ut dignissimos porro earum dolores nesciunt impedit deserunt corporis eum? Dolores, voluptates at incidunt repudiandae voluptatibus nostrum rerum!
+        </view>
+      </view>
+      <block wx:for="{{msg_list}}" wx:key="index"> 
+
+        <view class="dialog-one">
+        <image class="dialog-pic" src="{{item.pic}}"></image>
+        <view class="dialog-detail">
+          {{item.content}}
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 底部输入框 -->
+  <view class="bottom-box">
+    <view class="input-box">
+      <van-cell-group>
+  <van-field
+    value="{{ sms }}"
+    center
+    clearable
+    placeholder="请输入内容"
+    border="{{ false }}"
+    use-button-slot
+  >
+    <van-button slot="button" size="normal" type="primary"
+    color="#FDCF66"
+    bindtap="sendMsg"
+    >
+      发送
+    </van-button>
+  </van-field>
+</van-cell-group>
+    </view>
+  </view>
+</view>

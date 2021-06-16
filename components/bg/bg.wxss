@@ -1,0 +1,71 @@
+/* pages/s-register/s-register.wxss */
+
+.out-box{
+  padding: 72rpx 20rpx 0;
+box-sizing: border-box;
+
+}
+.box-inner{
+  border-radius: 25rpx 25rpx 0 0;
+  background-color: #ffffff;
+}
+.box-logo{
+  background-color: aliceblue;
+  height: 200rpx;
+  width: 200rpx;
+  margin: 0 auto;
+}
+.box-log-img{
+  width: 100%;
+  height: 100%;
+  height: 200rpx;
+  width: 200rpx;
+
+}
+.input-box{
+  padding: 40rpx;
+}
+.input-toast{
+  margin: 5% auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.toast-is{
+  color: #BAB8B8;
+  font-size: 12px;
+}
+.toast-go{
+  font-size: 12px;
+  font-weight: 550;
+}
+.input-item{
+  margin-bottom: 30rpx;
+}
+.input-item:last-child{
+  margin-bottom: 100rpx;
+}
+.van-field__body {
+  background-color: #eeeeee;
+}
+.input-item  .van-cell{
+  background-color: #eeeeee !important;
+  
+}
+
+.btn .van-button--primary {
+  border-radius: 20rpx;
+  margin-bottom: 100rpx;
+}
+.login-option{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 52rpx;
+   font-size: 15px;
+   color: #BEBBBB;
+   align-items: center;
+
+}
+.login-checkbox{
+  display: flex;
+}

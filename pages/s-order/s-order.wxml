@@ -1,0 +1,88 @@
+<view>
+  <!-- 导航 -->
+  <view>
+    <bar active="{{1}}" isTabbar ="{{true}}"></bar>
+  </view>
+  <!-- 搜索栏 -->
+  <view class="header-box">
+    <view class="search-box">
+      <van-search value="{{ value }}" shape="round" background="#ffffff" placeholder="请输入搜索关键词" />
+    </view>
+    <view class="btn-box">
+      <van-button round type="primary">搜索</van-button>
+    </view>
+  </view>
+  <!-- tab -->
+  <view>
+    <van-tabs swipeable animated color="#FDCF66" active="{{ current }}" bind:change="onChange">
+      <van-tab title="全部">
+      </van-tab>
+      <van-tab title="待接单"></van-tab>
+      <van-tab title="待处理"></van-tab>
+    </van-tabs>
+
+    <!-- 内容页 -->
+    <view class="page-section page-section-spacing swiper">
+      <swiper current="{{current}}" bind:change="changeIndex" style="height:{{swiper_height?swiper_height+'px':auto}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <scroll-view scroll-y="{{true}}" style="height:{{swiper_height?swiper_height+'px':auto}}">
+            <view class="swiper-item {{item}}"></view>
+            <view class="content-box">
+              <view class="content-list">
+                <view class="content-pic">
+                  <image class="pic-one" src="../../static/imgs/logo.png"></image>
+                  <view class="content-title">
+                    一只酸奶狗
+                  </view>
+                </view>
+                <view class="content-goods">
+                  <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image class="content-good" src="../../static/imgs/logo.png"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+                </view>
+                <view class="options-btn">
+                  <van-button round type="primary">确定接单</van-button>
+                </view>
+              </view>
+            </view>
+            <view class="content-box">
+              <view class="content-list">
+                <view class="content-pic">
+                  <image class="pic-one" src="../../static/imgs/logo.png"></image>
+                  <view class="content-title">
+                    一只酸奶狗
+                  </view>
+                </view>
+                <view class="content-goods">
+                  <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <image class="content-good" src="../../static/imgs/logo.png"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+                </view>
+                <view class="options-btn">
+                  <van-button round type="primary">确定接单</van-button>
+                </view>
+              </view>
+            </view>
+      </scroll-view>
+
+          </swiper-item>
+        </block>
+
+     
+
+
+      </swiper>
+    </view>
+  </view>
+</view>

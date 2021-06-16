@@ -1,0 +1,43 @@
+
+<view>
+  <van-dialog
+  use-slot
+  show="{{ show }}"
+  showConfirmButton="{{false}}"
+  closeOnClickOverlay="{{true}}"
+  bind:close="onClose"
+>
+<view class="dialog-box">
+  <view class="dialog-info-box">
+    <block wx:for="{{page_lists}}" wx:for-item="item"
+    wx:key="index"
+    >
+      <view class="dialog-info-list">
+      <view class="info-item">
+          {{item.info1}}
+      </view>
+      <view class="info-item">
+        {{item.info2}}
+        <block wx:if="{{item.info3}}">
+          <image class="info-pic" src="{{item.info3}}" mode="scaleToFill"></image>
+        </block>
+         </view>
+    </view>
+    </block>
+    <!-- 最后按钮 -->
+    <view class="go-btn" bindtap="goShop">
+      进入店铺
+      <image class="go-icon" src="../../static/imgs/left.png"></image>
+    </view>
+  </view>
+</view>
+</van-dialog>
+
+<!-- 是否审核通过的弹框 -->
+<view wx:if="{{isPass}}">
+  <popDialog></popDialog>
+</view>
+
+</view>
+
+

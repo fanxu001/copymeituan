@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "recordPop":"../s-recordpop/s-recordpop"
+  },
+  "disableScroll":true,
+  "navigationBarBackgroundColor": "#FDCF66",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

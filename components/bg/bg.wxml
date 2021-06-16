@@ -1,0 +1,28 @@
+<view>
+  <!-- 输入框大盒子 -->
+  <view class="out-box">
+    <view class="box-logo">
+      <image class="box-log-img" src="../../static/imgs/logo.png" lazy-load mode="widthFit"></image>
+    </view>
+    <view class="box-inner">
+      <view class="input-box">
+        <view class="input-toast">
+          <view class="toast-is">
+            {{toast_msg.text_f}}
+          </view>
+          <view class="toast-go" bind:tap="goLogin">
+            {{toast_msg.text_a}}
+          </view>
+        </view>
+        <view class="input-groups">
+          <slot></slot>
+        </view>
+        <view class="btn">
+          <van-button type="primary" size="large" color="#FFC914" bindtap="goNav">
+            {{btn_text}}
+          </van-button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

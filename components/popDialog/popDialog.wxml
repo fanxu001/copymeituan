@@ -1,0 +1,11 @@
+<van-dialog
+  use-slot
+  show="{{ show }}"
+  show-confirm-button
+  bind:close="onClose"
+>
+  <image class="pop-pic" src="../../static/imgs/false.png" />
+  <view class="pop-toast">
+    该店铺还未通过审核！
+  </view>
+</van-dialog>

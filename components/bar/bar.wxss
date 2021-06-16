@@ -1,0 +1,21 @@
+
+.top-navbar .van-tabbar{
+  box-shadow: 0px 3px 9px 6px rgba(0,0,0,0.09);
+}
+.van-nav-bar{
+  z-index: 1000 !important;
+  background-color: #FBCA5C;
+  border:none !important;
+  padding-top: 0 !important;
+}
+.van-hairline--bottom:after {
+  border-bottom-width: 0px;
+}
+.van-nav-bar__title,.van-nav-bar__left .van-icon{
+  color: #ffffff !important;
+  font-size: 18px !important;
+}
+.share-icon{
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,8 @@
+{
+  "component":true,
+  "usingComponents": {},
+  "navigationStyle":"default",
+  "backgroundTextStyle":"light",
+  "navigationBarBackgroundColor": "#FDCF66",
+  "navigationBarTitleText": ""
+}

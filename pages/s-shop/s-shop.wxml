@@ -1,0 +1,20 @@
+<view>
+  <bar active="{{2}}" isTabbar ="{{true}}"></bar>
+  <view class="options-box">
+    <block wx:for="{{settings_list}}" wx:key="index" wx:for-item="item">
+      <view class="option-list" bind:tap="goOption"  data-url="{{item.url}}">
+      <view class="option-item">
+        <image class="option-pic" src="{{item.set_pic}}"></image>
+        <view class="titles">
+          <view class="title-biglit">
+            {{item.title}}
+          </view>
+          <view class="title-litlit">
+            {{item.word}}
+          </view>
+        </view>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

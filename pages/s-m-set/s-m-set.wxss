@@ -1,0 +1,28 @@
+.input-box{
+  width: 90%;
+box-shadow: 0rpx 2rpx 5rpx 5rpx rgba(0,0,0,0.16); 
+margin: 0 auto;
+}
+.van-cell{
+height: 42px;
+margin: 18px 0;
+}
+.van-field__label{
+font-size: 16px;
+font-weight: bold;
+text-align: left;
+letter-spacing: 2px;
+color: #646566;
+}
+.upload-img{
+  display: flex;
+  padding-left: 15px;
+    align-items: center;
+}
+.upload-location{
+  padding-left: 15px;
+  margin: 10px ;
+  justify-content: center;
+    align-items: center;
+
+}

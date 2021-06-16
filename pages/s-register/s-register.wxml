@@ -1,0 +1,37 @@
+<view class="bg-color" style="height:{{bodyHeight+'px'}}">
+  <bg sms="{{sms}}" 
+  toast_msg="{{toast_msg}}" 
+   url="{{url}}"
+    btn_text="{{btn_text}}" 
+    nav_url="{{nav_url}}"
+    bindgoNav="goNav"
+    >
+
+    <view class="input-item">
+
+      <van-cell-group>
+        <van-field value="{{ sms }}" center clearable placeholder="请输入手机号" placeholder-style="color:#C0BBBB"
+          maxlength="11" border="{{ false }}" use-button-slot>
+          <van-button slot="button" size="small" type="primary" color="#FFC914">
+            发送验证码
+          </van-button>
+        </van-field>
+      </van-cell-group>
+    </view>
+    <view class="input-item">
+      <van-field value="{{ sms }}" center clearable placeholder="请输入验证码" placeholder-style="color:#C0BBBB"
+        border="{{ false }}">
+      </van-field>
+    </view>
+    <view class="input-item">
+      <van-field value="{{ sms }}" center clearable placeholder="请输入密码" placeholder-style="color:#C0BBBB"
+        border="{{ false }}">
+      </van-field>
+    </view>
+    <view class="input-item">
+      <van-field value="{{ sms }}" center clearable placeholder="请再次输入密码" placeholder-style="color:#C0BBBB"
+        border="{{ false }}">
+      </van-field>
+    </view>
+  </bg>
+</view>

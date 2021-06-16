@@ -1,0 +1,15 @@
+.pop-pic{
+  width: 95px;
+  height: 86px;
+  padding: 20rpx ;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.pop-toast{
+font-size: 13px;
+font-weight: 400;
+text-align: center;
+color: #000000;
+letter-spacing: 2px;
+}

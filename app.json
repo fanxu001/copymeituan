@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/s-register/s-register",
+    "pages/s-login/s-login",
+    "pages/s-record/s-record",
+    "pages/s-recordadd/s-recordadd",
+    "pages/s-order/s-order",
+    "pages/s-msg/s-msg",
+    "pages/s-msgDialog/s-msgDialog",
+    "pages/s-g-ad/s-g-ad",
+    "pages/s-s-control/s-s-control",
+    "pages/s-m-set/s-m-set",
+    "pages/s-shop/s-shop",
+    "pages/s-busdetail/s-busdetail"
+
+    ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FDCF66",
+    "navigationBarTitleText": "美团"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-transition": "@vant/weapp/transition/index",
+      "van-button": "@vant/weapp/button/index",
+      "van-icon": "@vant/weapp/icon/index",
+      "van-field": "@vant/weapp/field/index",
+      "van-radio": "@vant/weapp/radio/index",
+  "van-radio-group": "@vant/weapp/radio-group/index",
+  "van-picker": "@vant/weapp/picker/index",
+  "van-toast": "@vant/weapp/toast/index",
+  "van-tag": "@vant/weapp/tag/index",
+  "van-nav-bar": "@vant/weapp/nav-bar/index",
+  "van-tabbar": "@vant/weapp/tabbar/index",
+  "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+  "van-rate": "@vant/weapp/rate/index",
+  "van-dialog": "@vant/weapp/dialog/index",
+  "van-uploader": "@vant/weapp/uploader/index",
+  "van-notify": "@vant/weapp/notify/index",
+  "van-tab": "@vant/weapp/tab/index",
+  "van-tabs": "@vant/weapp/tabs/index",
+  "van-search": "@vant/weapp/search/index",
+  "van-share-sheet": "@vant/weapp/share-sheet/index",
+  "van-switch": "@vant/weapp/switch/index",
+  "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index",
+  "van-sidebar": "@vant/weapp/sidebar/index",
+  "van-sidebar-item": "@vant/weapp/sidebar-item/index"
+  }
+  
+}

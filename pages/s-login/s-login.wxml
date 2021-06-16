@@ -1,0 +1,36 @@
+<view class="bg-color" style="height:{{bodyHeight+'px'}}">
+  <bg sms="{{sms}}" toast_msg="{{toast_msg}}"  url="{{url}}"
+    btn_text="{{btn_text}}"  goLogin="goLogin" bindgoNav="goNav">
+    <view>
+      <view class="input-item">
+        <van-field center clearable placeholder="请输入手机号" placeholder-style="color:#C0BBBB" border="{{ false }}">
+        </van-field>
+      </view>
+      <view class="input-item">
+        <van-field type="password" placeholder="请输入密码" type="password" center placeholder="请输入密码"
+          placeholder-style="color:#C0BBBB" border="{{ false }}">
+        </van-field>
+      </view>
+    </view>
+      <view class="login-option">
+        <view class="login-checkbox">
+          <view>
+            <checkbox-group bindchange="checkboxChange">
+              <label class="checkbox ">
+                <checkbox value="1" color="#FFC914" />
+              </label>
+            </checkbox-group>
+          </view>
+          <view>
+            记住我
+          </view>
+        </view>
+        <view>
+          忘记密码
+        </view>
+      </view>
+    <view>
+    </view>
+
+  </bg>
+</view>

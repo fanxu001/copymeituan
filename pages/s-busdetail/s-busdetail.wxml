@@ -1,0 +1,91 @@
+<view>
+<!-- 导入bar -->
+<bar active="{{0}}" isTabbar ="{{true}}"></bar>
+<!-- 店铺名 + 头像 -->
+<view class="head">
+  <view class="head-pic-box">
+    <image class="head-pic" src="../../static/imgs/logo.png" mode="widthFit"></image>
+  </view>
+  <view class="head-title">
+    标题
+  </view>
+</view>
+
+<!-- 店铺信息 -->
+<view class="info-box">
+  <view class="info-list">
+  <view class="info-item">
+    <view class="item-titles">
+      <view class="item-title">今日订单量</view>
+      <view class="item-title">今日订单量</view>
+    </view>
+    <view class="item-titles">
+      <view class="item-title-bold">今日订单量</view>
+      <view class="item-title">
+        <van-rate
+  value="{{ value }}"
+  size="{{ 25 }}"
+  color="#FDCF66"
+  void-color="#eee"
+  void-icon="star"
+  bind:change="onChange"
+/>
+      </view>
+    </view>
+    <view class="item-titles">
+      <view class="item-title">今日订单量</view>
+      <view class="item-title">今日订单量</view>
+    </view>
+  </view>
+</view>
+<view class="info-list">
+  <view class="info-item">
+    <view class="item-titles">
+      <view class="item-title">今日订单量</view>
+      <view class="item-title">今日订单量</view>
+    </view>
+    <view class="item-titles">
+      <view class="item-title item-title-bold">今日订单量</view>
+      <view class="item-title-bold">
+        今日订单量
+      </view>
+    </view>
+  </view>
+</view>
+<view class="info-list">
+  <view class="info-item">
+    <view class="item-titles">
+      <view class="item-title-bold">今日经营分析</view>
+      <view class="item-title "></view>
+    </view>
+    <view class="item-titles">
+      <view class="item-title item-title-litbold">同商圈营业额排名</view>
+      <view class="item-title "></view>
+
+    </view>
+    <view class="item-titles">
+      <view class="item-title item-title-bolder">56</view>
+      <view class="item-title">
+        <image class="up-pic" src="../../static/imgs/up.png"></image>
+      </view>
+    </view>
+    <view class="item-titles">
+      <view class="item-title item-title-litbold">顾客分析</view>
+      <view class="item-title item-up">您超越了99%的商家！</view>
+      
+    </view>
+    <view class="item-titles">
+      <view class="item-title item-title-bolder">98</view>
+      <view class="item-title "></view>
+     
+    </view>
+    <view class="item-titles">
+      <view class="item-title item-title-con">昨日顾客数：99</view>
+      <view class="item-title "></view>
+      
+    </view>
+  </view>
+</view>
+</view>
+
+</view>

@@ -1,0 +1,68 @@
+.header-box{
+  display: flex;
+  padding: 17rpx ;
+}
+.search-box .van-search__content {
+  width: 253px;
+height: 28px;
+border-radius: 11px;
+  border:1px solid #F6C65D;
+  background-color: #ffffff;
+}
+.search-box  .van-icon-search{
+  color: #F6C65D;
+}
+.btn-box .van-button--primary, .btn-box  .van-button--normal{
+  border: none;
+  width: 60px;
+  height: 28px;
+background: #fed58d;
+margin: 10px 0 ;
+}
+.content-box{
+  padding: 20px 16px;
+  margin-bottom: 30px;
+
+}
+.content-list{
+  padding:  9px 13px;
+border: 1px solid #f6c65d;
+border-radius: 11px;
+}
+.content-pic{
+  display: flex;
+  margin-bottom: 12px;
+}
+.pic-one{
+  width: 41px;
+height: 41px;
+border-radius: 50%;
+}
+.content-title{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  color: #fcbb49;
+  letter-spacing: 1px;
+  padding-left: 13px;
+  display: flex;
+  align-items: center;
+}
+.content-good{
+  width: 100%;
+height: 100%;
+background: #fef3c7;
+border-radius: 10px;
+}
+.options-btn{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.options-btn .van-button--primary{
+height: 20px;
+background: linear-gradient(93deg,#02dcd9 0%, #00cdc9 47%, #04bab3 100%);
+border-radius: 8px;
+margin: 5px 0;
+}
+
